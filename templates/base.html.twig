@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <!-- <link rel="icon" href="favicon.ico"> -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&family=Roboto&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+    <div class="header">
+    <h1>Header</h1>
+    </div>
+
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="{{ url("home") }}">Home</a></li>
+                    <li><a href="{{ path("about") }}">About</a></li>
+                    <li><a href="{{ path("report") }}">Report</a></li>
+                    <li><a href="{{ path("debug") }}">Debug</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    {% block content %}
+    Default content
+    {% endblock %}
+
+    <div class="footer">
+        <p>© Victor Med C - Socials - 
+        <a class="socials" href="https://github.com/VictorMedM" title="Github" role="button">
+        GitHub
+        </a>
+        </p>
+    </div>
+    </body>
+</html>

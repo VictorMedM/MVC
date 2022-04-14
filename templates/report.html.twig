@@ -1,0 +1,20 @@
+{# templates/lucky_number.html.twig #}
+{% extends "base.html.twig" %}
+
+{% block title %}Reports{% endblock %}
+
+{% block content %}
+
+<div class="main">
+{% apply markdown_to_html %}
+Report
+======
+<p class="important">
+Reports for the MVC course.
+</p>
+{% endapply %}
+
+{{ include('report/kmom01.markdown.twig')|markdown_to_html}}
+{{ include('report/kmom02.markdown.twig')|markdown_to_html}}
+</div>
+{% endblock %}
